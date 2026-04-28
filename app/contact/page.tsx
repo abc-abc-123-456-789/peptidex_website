@@ -98,7 +98,7 @@ export default function ContactPage() {
             {/* Brand Logo Placeholder/Visual */}
             <div className="pt-8 border-t border-zinc-100">
               <Image
-                src="/logo.png"
+                src="/logo.jpg"
                 alt={`${contactInfo.company_name} official logo`}
                 width={120}
                 height={40}

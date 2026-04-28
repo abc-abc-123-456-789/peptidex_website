@@ -61,7 +61,7 @@ export default function AboutPage() {
                 We don&apos;t just represent a place; we represent a movement of growth, grit, and vision. Our collection is designed for those who are constantly in motion, transitioning from the classroom of life to the arenas of their future careers.
               </p>
               <p>
-                Whether you are dreaming of changing the world or simply mastering your craft, Pep Tide High provides the aesthetic for your journey. We celebrate the transition from <span className=&quot;italic&quot;&gt;&quot;what if&quot;&gt;</span> to <span className=&quot;italic&quot;&gt;&quot;watch me.&quot;&gt;</span>
+                Whether you are dreaming of changing the world or simply mastering your craft, Pep Tide High provides the aesthetic for your journey. We celebrate the transition from <span className="italic">&ldquo;what if&rdquo;</span> to <span className="italic">&ldquo;watch me.&rdquo;</span>
               </p>
             </div>
             
