@@ -1,0 +1,30 @@
+export interface Product {
+  name: string;
+  short_description: string;
+  long_description: string;
+  price: number;
+  slug: string;
+}
+
+const products: Product[] = [
+  {
+    "name": "white tee shirt",
+    "short_description": "The foundation for your next chapter. This classic white tee—built for comfort, confidence, and countless possibilities—is your Pep Tide starting point. Watch you.",
+    "long_description": "The foundation of any great look, and the start of your own Pep Tide story. This classic white tee is more than just a shirt—it’s a blank canvas for your ambitions. Crafted for comfort and built to last, it's the perfect everyday essential to wear while chasing your dreams. Whether you’re brainstorming in class or conquering your goals, this tee embodies the spirit of Pep Tide: ready for anything, fueled by possibility. Start your journey. Watch you.",
+    "price": 5,
+    "slug": "white-tee-shirt"
+  },
+  {
+    "name": "truckers cap",
+    "short_description": "Rep Pep Tide pride! This classic trucker cap embodies grit and vision—perfect for chasing your dreams, both on and off campus. Let your ambition take flight.",
+    "long_description": "Gear up for your next chapter with the official Pep Tide High School Trucker Cap. This isn't just a hat; it's a statement—a symbol of the grit and vision forged within our halls. Durable, comfortable, and styled with the iconic Pep Tide logo, it's perfect for showcasing your school spirit, wherever your journey takes you. Represent your dreams, your team, and the unwavering spirit of Pep Tide. Take flight. Watch me.",
+    "price": 5,
+    "slug": "truckers-cap"
+  }
+];
+
+export { products };
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
