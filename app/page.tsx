@@ -1,46 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Package, Star } from "lucide-react";
+import { ArrowRight, Package } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Where Dreams Take Flight | Pep Tide High School",
-  description: "Pep Tide High School is a vibrant launchpad for ambition, curiosity, and growth. Discover our official gear and start your journey.",
+  title: "Where Dreams Take Flight | Pep Tide High, LLC",
+  description: "Pep Tide is where ambition meets action. Discover our official gear and start your journey.",
 };
-
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  color: string;
-}
-
-const FEATURED_PRODUCTS: Product[] = [
-  {
-    id: "1",
-    name: "White Tee Shirt",
-    description: "The foundation for your next chapter. This classic white tee—built for comfort, confidence, and countless possibilities—is your Pep Tide starting point. Watch you.",
-    price: "$28.00",
-    color: "bg-slate-50",
-  },
-  {
-    id: "2",
-    name: "Truckers Cap",
-    description: "Rep Pep Tide pride! This classic trucker cap embodies grit and vision—perfect for chasing your dreams, both on and off campus. Let your ambition take flight.",
-    price: "$25.00",
-    color: "bg-zinc-800",
-  },
-  {
-    id: "3",
-    name: "Legacy Hoodie",
-    description: "A symbol of the journey. Heavyweight warmth for those late-night study sessions and early-morning ambitions.",
-    price: "$55.00",
-    color: "bg-zinc-300",
-  },
-];
 
 export default function HomePage() {
   return (
@@ -98,42 +67,34 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {FEATURED_PRODUCTS.map((product) => (
-            <Card key={product.id} className="rounded-none border-zinc-200 shadow-none flex flex-col">
-              <CardHeader className="p-0">
-                <div className={`aspect-square w-full ${product.color} border border-zinc-100 relative group overflow-hidden`}>
-                  {/* Placeholder for product image */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Package className="h-12 w-12 text-zinc-300" />
+          {products.slice(0, 3).map((product) => (
+            <Link key={product.slug} href={`/products/${product.slug}`} className="group">
+              <Card className="rounded-none border-zinc-200 shadow-none flex flex-col h-full">
+                <CardHeader className="p-0">
+                  <div className="aspect-square w-full bg-slate-200 border border-zinc-100 relative overflow-hidden group-hover:bg-slate-300 transition-colors">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Package className="h-12 w-12 text-zinc-300" />
+                    </div>
                   </div>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-white px-3 py-1 text-xs font-bold uppercase tracking-tighter border border-zinc-200">
-                      New Arrival
-                    </span>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="p-6 flex-grow">
-                <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="text-xl font-black uppercase tracking-tight">
+                </CardHeader>
+                <CardContent className="p-6 flex-grow">
+                  <CardTitle className="text-xl font-black uppercase tracking-tight mb-2">
                     {product.name}
                   </CardTitle>
-                  <div className="flex items-center text-zinc-400">
-                    <Star className="h-4 w-4 fill-current" />
-                    <span className="text-xs ml-1">4.9</span>
-                  </div>
-                </div>
-                <p className="text-zinc-600 text-sm leading-relaxed">
-                  {product.description}
-                </p>
-              </CardContent>
-              <CardFooter className="p-6 pt-0 flex items-center justify-between">
-                <span className="text-lg font-bold">{product.price}</span>
-                <Button variant="outline" className="rounded-none border-zinc-950 hover:bg-zinc-950 hover:text-white transition-colors">
-                  Add to Cart
-                </Button>
-              </CardFooter>
-            </Card>
+                  <p className="text-zinc-600 text-sm leading-relaxed">
+                    {product.short_description}
+                  </p>
+                </CardContent>
+                <CardFooter className="p-6 pt-0 flex items-center justify-between">
+                  <span className="text-lg font-bold">
+                    ${(product.price > 0 ? product.price : 5).toFixed(2)}
+                  </span>
+                  <Button variant="outline" className="rounded-none border-zinc-950 hover:bg-zinc-950 hover:text-white transition-colors">
+                    View
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Link>
           ))}
         </div>
       </section>
