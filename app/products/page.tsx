@@ -67,6 +67,7 @@ export default function ProductsPage() {
               short_description={product.short_description}
               price={product.price}
               slug={product.slug}
+              images={product.images}
             />
           ))}
         </div>

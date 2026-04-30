@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { products, getProductBySlug } from "@/lib/products";
 import AddToCartButton from "@/components/AddToCartButton";
 
@@ -36,9 +37,20 @@ export default async function ProductPage({
     <main className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          {/* Product image placeholder */}
-          <div className="aspect-square w-full bg-slate-200 flex items-center justify-center">
-            <span className="text-slate-400 text-sm uppercase tracking-widest">Product Image</span>
+          {/* Product image */}
+          <div className="relative aspect-square w-full bg-slate-200 overflow-hidden">
+            {product.images && product.images.length > 0 ? (
+              <Image
+                src={product.images[0]}
+                alt={product.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            ) : (
+              <div className="w-full h-full bg-slate-200" />
+            )}
           </div>
 
           {/* Product details + cart interaction */}

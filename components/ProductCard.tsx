@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -11,6 +12,7 @@ interface ProductCardProps {
   short_description: string;
   price: number;
   slug: string;
+  images: string[];
 }
 
 /**
@@ -26,6 +28,7 @@ export default function ProductCard({
   short_description,
   price,
   slug,
+  images,
 }: ProductCardProps) {
   // Business Logic: Default price to $5.00 if 0 or missing per requirements
   const effectivePrice = price > 0 ? price : 5.00;
@@ -41,11 +44,18 @@ export default function ProductCard({
   return (
     <Link href={`/products/${slug}`} className="group block h-full transition-transform duration-200 hover:-translate-y-1">
       <Card className="h-full overflow-hidden border-slate-200 transition-colors group-hover:border-slate-900">
-        {/* Product Image Placeholder */}
-        <div 
-          className="aspect-square w-full bg-slate-200 transition-colors group-hover:bg-slate-300"
-          aria-hidden="true"
-        />
+        {/* Product Image */}
+        <div className="relative aspect-square w-full bg-slate-200 overflow-hidden transition-colors group-hover:bg-slate-300">
+          {images && images.length > 0 ? (
+            <Image
+              src={images[0]}
+              alt={name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            />
+          ) : null}
+        </div>
 
         <CardContent className="flex flex-1 flex-col p-4">
           <div className="flex flex-col gap-2">

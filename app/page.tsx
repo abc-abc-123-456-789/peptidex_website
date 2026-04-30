@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Package } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { products } from "@/lib/products";
@@ -71,10 +71,16 @@ export default function HomePage() {
             <Link key={product.slug} href={`/products/${product.slug}`} className="group">
               <Card className="rounded-none border-zinc-200 shadow-none flex flex-col h-full">
                 <CardHeader className="p-0">
-                  <div className="aspect-square w-full bg-slate-200 border border-zinc-100 relative overflow-hidden group-hover:bg-slate-300 transition-colors">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Package className="h-12 w-12 text-zinc-300" />
-                    </div>
+                  <div className="relative aspect-square w-full bg-slate-200 border border-zinc-100 overflow-hidden group-hover:bg-slate-300 transition-colors">
+                    {product.images && product.images.length > 0 && (
+                      <Image
+                        src={product.images[0]}
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    )}
                   </div>
                 </CardHeader>
                 <CardContent className="p-6 flex-grow">
