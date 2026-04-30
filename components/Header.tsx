@@ -102,7 +102,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation - Grid items centered/spread */}
-          <nav className="hidden md:grid md:col-span-6 items-center justify-center gap-8">
+          <nav className="hidden md:flex md:col-span-6 items-center justify-center gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
