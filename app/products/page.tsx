@@ -27,14 +27,6 @@ export default function ProductsPage() {
       <header className="border-b border-zinc-100 bg-white py-12 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center space-y-4">
-            <Image
-              src="/logo.png" // Assuming .png based on standard assets, works with other ext if provided
-              alt="Pep Tide High, LLC Logo"
-              width={60}
-              height={60}
-              priority
-              className="w-12 h-12 md:w-16 md:h-16 object-contain"
-            />
             <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-zinc-900">
               Pep Tide High, LLC
             </h1>
