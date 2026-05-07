@@ -1,58 +1,38 @@
 [
   {
-    "name": "white tee shirt",
-    "short_description": "The foundation for your next chapter. This classic white tee—built for comfort, confidence, and countless possibilities—is your Pep Tide starting point. Watch you.",
-    "long_description": "The foundation of any great look, and the start of your own Pep Tide story. This classic white tee is more than just a shirt—it's a blank canvas for your ambitions. Crafted for comfort and built to last, it's the perfect everyday essential to wear while chasing your dreams. Whether you're brainstorming in class or conquering your goals, this tee embodies the spirit of Pep Tide: ready for anything, fueled by possibility. Start your journey. Watch you.",
-    "price": 5,
-    "slug": "white-tee-shirt",
-    "images": ["/products/white-tee-shirt-1.png"]
-  },
-  {
-    "name": "truckers cap",
-    "short_description": "Rep Pep Tide pride! This classic trucker cap embodies grit and vision—perfect for chasing your dreams, both on and off campus. Let your ambition take flight.",
-    "long_description": "Gear up for your next chapter with the official Pep Tide High School Trucker Cap. This isn't just a hat; it's a statement—a symbol of the grit and vision forged within our halls. Durable, comfortable, and styled with the iconic Pep Tide logo, it's perfect for showcasing your school spirit, wherever your journey takes you. Represent your dreams, your team, and the unwavering spirit of Pep Tide. Take flight. Watch me.",
-    "price": 5,
-    "slug": "truckers-cap",
-    "images": ["/products/truckers-cap-1.png"]
-  },
-  {
     "name": "tan kraft notebook",
     "short_description": "Capture bright ideas in this tan kraft notebook—your Pep Tide launchpad. Jot down dreams, lessons, and sparks of inspiration as you write your next chapter.",
     "long_description": "Fuel your Pep Tide journey with this classic tan kraft notebook. More than just paper, it’s a canvas for your aspirations—a space to capture brilliant ideas sparked in class, map out future goals, and chronicle the friendships that empower you. Durable and dependable, it's ready for every note, sketch, and dream. Let this notebook be a tangible reminder that at Pep Tide, every page holds the potential to transform \"what if\" into \"watch me.\" Start writing your story today.",
-    "price": 5,
-    "slug": "tan-kraft-notebook",
-    "images": ["/products/tan-kraft-notebook-1.png"]
+    "price": 5
+  },
+  {
+    "name": "white tee shirt",
+    "short_description": "Fuel your potential. This classic white tee—a Pep Tide staple—is your blank canvas for ambition, ready for every lesson, challenge, and dream that takes flight.",
+    "long_description": "The foundation of every great look, and every bold ambition. Our classic white tee is more than just a shirt—it’s a Pep Tide essential. Crafted for comfort and built to last, it’s your blank canvas to express your individuality, your uniform for chasing dreams, and your go-to for tackling every challenge. Wear it with confidence, knowing you’re representing a place where potential takes flight. Start your story. Watch it unfold.",
+    "price": 5
   },
   {
     "name": "sweat shirt",
     "short_description": "Fuel your ambition. This Pep Tide sweatshirt embodies grit, kindness, and vision—a cozy reminder that your journey, and your dreams, are taking flight.",
     "long_description": "Embrace the spirit of Pep Tide. This isn't just a sweatshirt; it's a symbol of your journey—a cozy reminder of the grit, kindness, and vision cultivated within our halls. Crafted for comfort and built to last, it’s perfect for late-night study sessions, cheering on the team, or simply embodying the fearless pursuit of your dreams. Wear your ambition. Wear Pep Tide. Because here, dreams don’t just begin—they take flight.",
-    "price": 5,
-    "slug": "sweat-shirt",
-    "images": ["/products/sweat-shirt-1.png"]
+    "price": 5
   },
   {
     "name": "single 2\"x2\" sticker",
     "short_description": "Show your Pep Tide pride! This vibrant 2\"x2\" sticker celebrates ambition, growth, and the brave steps that transform dreams into reality—one inspiring moment at a time.",
     "long_description": "Show your Pep Tide pride! This vibrant 2\"x2\" sticker is a little piece of the extraordinary place where dreams take flight. Represent the grit, kindness, and vision fostered within our halls—where ambition sparks and futures begin. Perfect for water bottles, laptops, or anywhere you want to carry the spirit of Pep Tide High School. It's a bold reminder that with every step, you’re not just learning, you're soaring. Show the world what it means to be a Pep Tide student!",
-    "price": 5,
-    "slug": "single-2-x2-sticker",
-    "images": ["/products/single-2-x2-sticker-1.png"]
+    "price": 5
   },
   {
     "name": "coffee mug",
     "short_description": "Fuel your ambition with the Pep Tide Mug. Sip inspiration, chase your dreams, and conquer every challenge—one bold step, one warm cup, at a time.",
     "long_description": "Fuel your ambition with the Pep Tide High School Mug. More than just a vessel for your favorite brew, it’s a reminder of the grit, kindness, and vision nurtured within our halls. Start each day with a dose of Pep Tide spirit—a symbol of the brave steps you’re taking toward your dreams. Perfect for late-night study sessions, early morning brainstorming, or simply celebrating your journey. Embrace the possibility. Watch you.",
-    "price": 5,
-    "slug": "coffee-mug",
-    "images": ["/products/coffee-mug-1.png"]
+    "price": 5
   },
   {
-    "name": "multiple stickers on a single sheet",
-    "short_description": "A collection of vibrant Pep Tide stickers on a single sheet. Perfect for personalizing all your gear with the spirit of ambition and growth.",
-    "long_description": "Express your Pep Tide spirit everywhere with this versatile sticker sheet. Featuring multiple designs that celebrate grit, kindness, and vision, these high-quality stickers are perfect for laptops, water bottles, notebooks, and more. Take the tide with you and show the world that at Pep Tide, we don't just dream—we soar.",
-    "price": 5,
-    "slug": "multiple-sickers-on-a-single-sheet",
-    "images": ["/products/multiple-sickers-on-a-single-sheet-1.png"]
+    "name": "multiple sickers on a single sheet",
+    "short_description": "",
+    "long_description": "",
+    "price": 5
   }
 ]
