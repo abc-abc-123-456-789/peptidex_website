@@ -7,6 +7,7 @@ export interface Product {
   price: number;
   slug: string;
   images: string[];
+  sizes?: string[];
 }
 
 const products: Product[] = productsData as Product[];

@@ -12,6 +12,7 @@ interface CartItem {
   price: number;
   quantity: number;
   slug: string;
+  size?: string;
 }
 
 export default function CartPage() {
@@ -34,9 +35,9 @@ export default function CartPage() {
     setIsLoading(false);
   }, []);
 
-  const updateQuantity = (slug: string, delta: number) => {
+  const updateQuantity = (slug: string, size: string | undefined, delta: number) => {
     const newItems = items.map((item) => {
-      if (item.slug === slug) {
+      if (item.slug === slug && item.size === size) {
         const newQty = Math.max(1, item.quantity + delta);
         return { ...item, quantity: newQty };
       }
@@ -46,8 +47,8 @@ export default function CartPage() {
     localStorage.setItem("wc_cart", JSON.stringify(newItems));
   };
 
-  const removeItem = (slug: string) => {
-    const newItems = items.filter((item) => item.slug !== slug);
+  const removeItem = (slug: string, size: string | undefined) => {
+    const newItems = items.filter((item) => !(item.slug === slug && item.size === size));
     setItems(newItems);
     localStorage.setItem("wc_cart", JSON.stringify(newItems));
   };
@@ -116,7 +117,7 @@ export default function CartPage() {
           <div className="space-y-6">
             {items.map((item) => (
               <div 
-                key={item.slug} 
+                key={`${item.slug}-${item.size}`} 
                 className="flex items-start gap-6 border-b border-border pb-6 last:border-0 last:pb-0"
               >
                 <div className="h-24 w-24 flex-shrink-0 bg-muted rounded-sm" aria-hidden="true" />
@@ -126,12 +127,15 @@ export default function CartPage() {
                     <h3 className="text-lg leading-6">{item.name}</h3>
                     <p className="ml-4">${item.price.toFixed(2)}</p>
                   </div>
-                  <p className="mt-1 text-sm text-muted-foreground italic">SKU: {item.slug}</p>
+                  <div className="mt-1 flex flex-col text-sm text-muted-foreground">
+                    <p className="italic">SKU: {item.slug}</p>
+                    {item.size && <p className="font-bold uppercase tracking-widest text-zinc-900 mt-1">Size: {item.size}</p>}
+                  </div>
                   
                   <div className="mt-4 flex items-center justify-between">
                     <div className="flex items-center border border-input rounded-md">
                       <button
-                        onClick={() => updateQuantity(item.slug, -1)}
+                        onClick={() => updateQuantity(item.slug, item.size, -1)}
                         className="p-2 hover:bg-muted transition-colors"
                         aria-label={`Decrease quantity of ${item.name}`}
                       >
@@ -141,7 +145,7 @@ export default function CartPage() {
                         {item.quantity}
                       </span>
                       <button
-                        onClick={() => updateQuantity(item.slug, 1)}
+                        onClick={() => updateQuantity(item.slug, item.size, 1)}
                         className="p-2 hover:bg-muted transition-colors"
                         aria-label={`Increase quantity of ${item.name}`}
                       >
@@ -150,7 +154,7 @@ export default function CartPage() {
                     </div>
 
                     <button
-                      onClick={() => removeItem(item.slug)}
+                      onClick={() => removeItem(item.slug, item.size)}
                       className="flex items-center gap-1 text-sm font-medium text-destructive hover:underline"
                     >
                       <Trash2 className="h-4 w-4" />

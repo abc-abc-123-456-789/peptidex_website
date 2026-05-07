@@ -5,7 +5,8 @@
     "long_description": "The foundation of any great look, and the start of your own Pep Tide story. This classic white tee is more than just a shirt—it's a blank canvas for your ambitions. Crafted for comfort and built to last, it's the perfect everyday essential to wear while chasing your dreams. Whether you're brainstorming in class or conquering your goals, this tee embodies the spirit of Pep Tide: ready for anything, fueled by possibility. Start your journey. Watch you.",
     "price": 27,
     "slug": "white-tee-shirt",
-    "images": ["/products/white-tee-shirt-1.png"]
+    "images": ["/products/white-tee-shirt-1.png"],
+    "sizes": ["Small", "Medium", "Large"]
   },
   {
     "name": "truckers cap",
@@ -29,7 +30,8 @@
     "long_description": "Embrace the spirit of Pep Tide. This isn't just a sweatshirt; it's a symbol of your journey—a cozy reminder of the grit, kindness, and vision cultivated within our halls. Crafted for comfort and built to last, it’s perfect for late-night study sessions, cheering on the team, or simply embodying the fearless pursuit of your dreams. Wear your ambition. Wear Pep Tide. Because here, dreams don’t just begin—they take flight.",
     "price": 43,
     "slug": "sweat-shirt",
-    "images": ["/products/sweat-shirt-1.png"]
+    "images": ["/products/sweat-shirt-1.png"],
+    "sizes": ["Small", "Medium", "Large"]
   },
   {
     "name": "single 2\"x2\" sticker",

@@ -68,7 +68,7 @@ export default async function ProductPage({
               <p className="text-zinc-700 leading-relaxed">{product.long_description}</p>
             </div>
 
-            <AddToCartButton name={product.name} price={price} slug={product.slug} />
+            <AddToCartButton name={product.name} price={price} slug={product.slug} sizes={product.sizes} />
           </div>
         </div>
       </div>
